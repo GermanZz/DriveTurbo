@@ -1,0 +1,40 @@
+#header {
+    background-color: #343a40;
+}
+
+div.breadcrumbs {
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    background-color: #dc3545;
+}
+
+fieldset.module h2 {
+    background-color: #dc3545;
+}
+
+#user-tools {
+    font-size: 0.8rem;
+}
+
+.module caption, #changelist-filter h2 {
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    background-color: #dc3545;
+
+    border-radius: 3px;
+}
+
+#content h1 {
+    font-weight: normal;
+    font-size: 2rem;
+
+    color: #212529;
+}
+
+
+th a, th a:link {
+    font-weight: 600;
+    font-size: 1rem;
+}

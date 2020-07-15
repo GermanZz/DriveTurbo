@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Passero+One&display=swap');
+
+.card-text {
+    font-size: 1.2rem;
+}
+
+#main-footer {
+    font-family: 'Passero One', cursive;
+    font-size: 1.6rem;
+    color: white;
+}
+
+@media (max-width: 992px) {
+    .navbar-nav li {
+        width: 100%;
+        margin-top: 12px;
+    }
+}
+
+.pegination {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.pegination .nav-links {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.pegination .nav-links .page-numbers {
+    border: 1px solid #bd2130;
+    border-radius: 50%;
+    color: #bd2130;
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    height: 45px;
+    line-height: 45px;
+    list-style: outside none none;
+    margin-right: 5px;
+    text-align: center;
+    width: 45px;
+}
+
+.pegination .nav-links .page-numbers.current {
+    background: #dc3545;
+    color: #fff;
+}
+
+.pegination .nav-links .page-numbers:hover {
+    background: #dc3545;
+    color: #fff;
+}
+
+.pegination .nav-links a {
+    text-decoration: none;
+}
+
+ul.errorlist {
+    list-style: none;
+    margin-left: -40px;
+}
+
+ul.errorlist li {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+h3.display-3 {
+    font-weight: bold;
+}
+
