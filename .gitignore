@@ -1,0 +1,9 @@
+.idea/
+djang_caches/
+media/
+static/
+catalog/__pycache__/
+catalog/migrations/
+DriveTurbo/__pycache__/
+*.sqlite3
+*.pyc

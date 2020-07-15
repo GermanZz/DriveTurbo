@@ -1,0 +1,39 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'img/logo.svg' %}" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                {% if not request.user.is_authenticated %}
+                    <li class="nav-item mr-md-3">
+                        <a class="btn btn-primary nav-link text-white" href="{% url 'login' %}">Войти</a>
+                    </li>
+                    <li class="nav-item mr-md-3">
+                        <a class="btn btn-danger nav-link text-white" href="{% url 'register' %}">Создать Аккаунт</a>
+                    </li>
+                {% endif %}
+                {% if request.user.is_superuser %}
+                    <li class="nav-item mr-md-3">
+                        <a target="_blank" class="btn btn-success nav-link text-white" href="{% url 'admin:index' %}">Панель
+                            Администратора</a>
+                    </li>
+                {% endif %}
+                {% if not request.user.is_superuser and request.user.is_authenticated %}
+                    <li class="nav-item mr-md-3">
+                        <a class="btn btn-success nav-link text-white" href="{% url 'create_advertisement' %}">Добавить
+                            Объявление</a>
+                    </li>
+                {% endif %}
+                {% if request.user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="btn btn-danger nav-link text-white" href="{% url 'logout' %}">Выйти</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>

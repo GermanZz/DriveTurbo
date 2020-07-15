@@ -1,0 +1,12 @@
+{% extends 'catalog/base_without_filter.html' %}
+{% block title %}Добавить объявление{% endblock %}
+
+{% block content %}
+    <h1 class="text-center">Добавить объявление</h1>
+        <form enctype="multipart/form-data" class="mt-4" method="post">
+            {% csrf_token %}
+            {{ form.media }}
+            {{ form.as_p }}
+            <input class="btn btn-success btn-block" type="submit" value="Создать">
+        </form>
+{% endblock %}

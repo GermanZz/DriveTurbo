@@ -1,0 +1,12 @@
+{% extends 'catalog/base_without_filter.html' %}
+{% load static %}
+{% block title %}Авторизация{% endblock %}
+
+{% block content %}
+    <img width="100%" class="img-fluid" src="{% static 'img/logo_black.svg' %}" alt="">
+    <form class="mt-2" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="btn btn-success btn-block my-4" type="submit" value="Войти">
+    </form>
+{% endblock %}

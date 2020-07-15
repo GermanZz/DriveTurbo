@@ -1,0 +1,12 @@
+{% extends 'catalog/base_without_filter.html' %}
+
+{% block title %}Регистраиция{% endblock %}
+
+{% block content %}
+    <h1 class="text-center">Регистрация</h1>
+    <form class="mt-2" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="btn btn-success btn-block" type="submit" value="Зарегистрироваться">
+    </form>
+{% endblock %}

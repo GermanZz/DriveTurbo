@@ -1,0 +1,16 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}DriveTurbo{% endblock %}
+
+
+{% block extrastyle %}
+    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+    <link rel="icon" href="{% static 'img/car.png' %}">
+{% endblock %}
+
+{% block branding %}
+    <h1 id="site-name"><a href="{% url 'admin:index' %}"><img src="{% static 'img/logo.svg' %}" alt="brand"></a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
